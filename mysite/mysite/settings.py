@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import logging.config
 from pathlib import Path
-from os import getenv
+from os import getenv, path
 
 from django.conf.global_settings import DATABASES
 from django.urls import reverse_lazy
@@ -20,6 +20,7 @@ from django.urls import reverse_lazy
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATABASES_DIR = BASE_DIR / 'db'
 DATABASES_DIR.mkdir(exist_ok=True)
+STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 
 
 # Quick-start development settings - unsuitable for production
