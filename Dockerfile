@@ -14,4 +14,3 @@ COPY mysite .
 
 
 CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000"]
-CMD ["python", "manage.py", "collectstatic"]
